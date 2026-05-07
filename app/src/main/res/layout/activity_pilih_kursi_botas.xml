@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgHeader"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sampul_reserve_a_seat" /> <View
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="#4D000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_alignTop="@id/imgHeader"
+                android:layout_alignStart="@id/imgHeader"
+                android:layout_alignEnd="@id/imgHeader">
+
+                <ImageView
+                    android:id="@+id/btnBackHeader"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/sebelumnya"
+                    app:tint="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reserve a Seat"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:shadowColor="#80000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imgHeader"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="40dp"
+                android:text="The kirk cafe botani square"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:shadowColor="#80000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgHeader"
+                android:layout_marginTop="-24dp"
+                android:background="@drawable/bg_rounded_top_white"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Denah Reservasi"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/denah_restoran_botas"
+                    android:layout_marginBottom="24dp"/> <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Kursi"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="32dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="5" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/seatA" android:tag="seat" style="@style/SeatText" android:text="A"/>
+                        <TextView android:id="@+id/seatB" android:tag="seat" style="@style/SeatText" android:text="B"/>
+                        <TextView android:id="@+id/seatC" android:tag="seat" style="@style/SeatText" android:text="C"/>
+                        <TextView android:id="@+id/seatD" android:tag="seat" style="@style/SeatText" android:text="D"/>
+                        <TextView android:id="@+id/seatE" android:tag="seat" style="@style/SeatText" android:text="E"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="5" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/seatF" android:tag="seat" style="@style/SeatText" android:text="F"/>
+                        <TextView android:id="@+id/seatG" android:tag="seat" style="@style/SeatText" android:text="G"/>
+                        <TextView android:id="@+id/seatH" android:tag="seat" style="@style/SeatText" android:text="H"/>
+                        <TextView android:id="@+id/seatI" android:tag="seat" style="@style/SeatText" android:text="I"/>
+                        <TextView android:id="@+id/seatJ" android:tag="seat" style="@style/SeatText" android:text="J"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="5">
+                        <TextView android:id="@+id/seatK" android:tag="seat" style="@style/SeatText" android:text="K"/>
+                        <TextView android:id="@+id/seatL" android:tag="seat" style="@style/SeatText" android:text="L"/>
+                        <TextView android:id="@+id/seatM" android:tag="seat" style="@style/SeatText" android:text="M"/>
+                        <TextView android:id="@+id/seatN" android:tag="seat" style="@style/SeatText" android:text="N"/>
+                        <TextView android:id="@+id/seatO" android:tag="seat" style="@style/SeatText" android:text="O"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="24dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnKembali"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_button"
+                        android:text="kembali"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:paddingHorizontal="12dp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLanjutkan"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_button"
+                        android:text="Lanjutkan"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:paddingHorizontal="12dp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:src="@drawable/home" app:tint="@android:color/white"/>
+        <ImageView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:src="@drawable/recipt" app:tint="@android:color/white"/>
+        <ImageView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:src="@drawable/profile_bar" app:tint="@android:color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>

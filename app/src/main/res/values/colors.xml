@@ -1,0 +1,21 @@
+<resources>
+    <!-- laman login -->
+    <color name="colorPrimary">#2D472C</color>
+    <color name="colorPrimaryDark">#1D2E1E</color>
+    <color name="colorAccent">#2D472C</color>
+
+    <!-- laman button -->
+    <color name="bg_color">#F4EBE1</color>
+    <color name="green_button">#2D472C</color>
+    <color name="text_dark">#333333</color>
+    <color name="text_hint">#A0A0A0</color>
+
+    <!-- laman utama -->
+    <color name="header_brown">#6E4F3A</color>
+    <color name="address_brown">#4A3427</color>
+    <color name="hero_green">#8CB059</color>
+    <color name="nav_dark_green">#1D2E1E</color>
+    <color name="white_transparent">#E6FFFFFF</color>
+    <color name="dot_active">#8CB059</color>
+    <color name="dot_inactive">#D9D9D9</color>
+</resources>

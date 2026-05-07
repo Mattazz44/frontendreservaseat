@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgHeader"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sampul_jambu_dua" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="#66000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/btnBackHeader"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/sebelumnya"
+                    app:tint="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reserve a Seat"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imgHeader"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="40dp"
+                android:text="The Kirk Cafe Jambu Dua"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgHeader"
+                android:layout_marginTop="-24dp"
+                android:background="@drawable/bg_rounded_top_white"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Silahkan Melakukan Pembayaran DP"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_grey"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total DP"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/text_dark"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RP 130.000"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:textColor="#5BA969"
+                        android:layout_marginBottom="12dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D1D1D1"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Pemesan :"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_dark"/>
+                    <TextView
+                        android:id="@+id/tvSummaryNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Pemesan"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Telepon / Whatsapp Aktif :"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_dark"/>
+                    <TextView
+                        android:id="@+id/tvSummaryTelepon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Telepon"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat Email :"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_dark"/>
+                    <TextView
+                        android:id="@+id/tvSummaryEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat Email"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_payment_list"
+                    android:layout_marginBottom="16dp">
+
+                    <RelativeLayout android:id="@+id/btnPayQris" android:layout_width="match_parent" android:layout_height="50dp" android:paddingHorizontal="16dp" android:background="?android:attr/selectableItemBackground">
+                        <ImageView android:id="@+id/icQris" android:layout_width="40dp" android:layout_height="40dp" android:layout_centerVertical="true" android:src="@drawable/qris"/> <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/icQris" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:text="QRIS" android:textStyle="bold" android:textColor="@color/text_dark"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_media_next" app:tint="#888888"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+
+                    <RelativeLayout android:id="@+id/btnPayDana" android:layout_width="match_parent" android:layout_height="50dp" android:paddingHorizontal="16dp" android:background="?android:attr/selectableItemBackground"> <ImageView android:id="@+id/icDana" android:layout_width="40dp" android:layout_height="40dp" android:layout_centerVertical="true" android:src="@drawable/dana"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/icDana" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:text="DANA" android:textStyle="bold" android:textColor="@color/text_dark"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_media_next" app:tint="#888888"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+
+                    <RelativeLayout android:id="@+id/btnPayOvo" android:layout_width="match_parent" android:layout_height="50dp" android:paddingHorizontal="16dp" android:background="?android:attr/selectableItemBackground">
+                        <ImageView android:id="@+id/icOvo" android:layout_width="40dp" android:layout_height="40dp" android:layout_centerVertical="true" android:src="@drawable/ovo"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/icOvo" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:text="OVO" android:textStyle="bold" android:textColor="@color/text_dark"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_media_next" app:tint="#888888"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+
+                    <RelativeLayout android:id="@+id/btnPayGopay" android:layout_width="match_parent" android:layout_height="50dp" android:paddingHorizontal="16dp" android:background="?android:attr/selectableItemBackground">
+                        <ImageView android:id="@+id/icGopay" android:layout_width="24dp" android:layout_height="24dp" android:layout_centerVertical="true" android:src="@drawable/gopay"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/icGopay" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:text="GOPAY" android:textStyle="bold" android:textColor="@color/text_dark"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_media_next" app:tint="#888888"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+
+                    <RelativeLayout android:id="@+id/btnPayLainnya" android:layout_width="match_parent" android:layout_height="50dp" android:paddingHorizontal="16dp" android:background="?android:attr/selectableItemBackground">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:text="Pilih Pembayaran Lainnya" android:textStyle="bold" android:textColor="@color/text_dark"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_media_next" app:tint="#888888"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="*note : Mohon hadir 10 menit sebelum jadwal reservasi. Reservasi dapat dibatalkan jika terlambat."
+                    android:textColor="#D32F2F"
+                    android:textSize="11sp"
+                    android:layout_marginBottom="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="24dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnKembali"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_button"
+                        android:text="Kembali"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLanjutkan"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_button"
+                        android:text="Lanjutkan"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:src="@drawable/home" app:tint="@android:color/white"/>
+        <ImageView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:src="@drawable/recipt" app:tint="@android:color/white"/>
+        <ImageView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:src="@drawable/profile_bar" app:tint="@android:color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>
