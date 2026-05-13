@@ -137,6 +137,7 @@
 
                 <!-- Cards -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBotas"
                     android:layout_width="match_parent"
                     android:layout_height="195dp"
                     android:layout_marginHorizontal="4dp"
@@ -200,6 +201,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardJambuDua"
                     android:layout_width="match_parent"
                     android:layout_height="195dp"
                     android:layout_marginHorizontal="4dp"

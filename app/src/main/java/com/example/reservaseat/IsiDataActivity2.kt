@@ -1,5 +1,6 @@
-package com.example.reservaseat // Ganti sesuai package lu
+package com.example.reservaseat
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -14,36 +15,35 @@ class IsiDataActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_isi_data_jambu_dua)
         supportActionBar?.hide()
 
-        // Deklarasi EditText
         val etNama = findViewById<EditText>(R.id.etNama)
         val etTelepon = findViewById<EditText>(R.id.etTelepon)
         val etEmail = findViewById<EditText>(R.id.etEmail)
         val etPerihal = findViewById<EditText>(R.id.etPerihal)
         val etNota = findViewById<EditText>(R.id.etNota)
 
-        // Tombol Navigasi Kembali
+        // Terima data kursi dari PilihKursiActivity2
+        val kursiTerpilih = intent.getStringExtra("KURSI") ?: ""
+
         findViewById<ImageView>(R.id.btnBackHeader).setOnClickListener { finish() }
         findViewById<Button>(R.id.btnKembali).setOnClickListener { finish() }
 
-        // Tombol Lanjutkan
+        // Tombol Lanjutkan — navigasi ke PembayaranActivity2
         findViewById<Button>(R.id.btnLanjutkan).setOnClickListener {
-            // Ambil data dari inputan
             val nama = etNama.text.toString().trim()
             val telepon = etTelepon.text.toString().trim()
             val email = etEmail.text.toString().trim()
             val perihal = etPerihal.text.toString().trim()
             val nota = etNota.text.toString().trim()
 
-            // Validasi sederhana: Pastikan field penting nggak kosong
             if (nama.isEmpty() || telepon.isEmpty() || email.isEmpty() || perihal.isEmpty()) {
                 Toast.makeText(this, "Harap lengkapi data yang wajib diisi", Toast.LENGTH_SHORT).show()
             } else {
-                // Logic untuk lanjut ke halaman selanjutnya atau memproses pembayaran
-                Toast.makeText(this, "Data tersimpan! Lanjut ke pembayaran...", Toast.LENGTH_SHORT).show()
-
-                // Contoh pindah halaman:
-                // val intent = Intent(this, PembayaranActivity::class.java)
-                // startActivity(intent)
+                val intent = Intent(this, PembayaranActivity2::class.java)
+                intent.putExtra("NAMA_PEMESAN", nama)
+                intent.putExtra("NO_TELP", telepon)
+                intent.putExtra("EMAIL", email)
+                intent.putExtra("KURSI", kursiTerpilih)
+                startActivity(intent)
             }
         }
     }
