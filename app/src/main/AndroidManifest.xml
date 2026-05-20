@@ -11,15 +11,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Reservaseat">
+
+        <!-- Login Activity sebagai halaman pertama saat aplikasi dibuka -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".PilihCabangActivity" />
+
+        <!-- Alur Cabang Botas -->
+        <activity android:name=".PilihTanggalActivity" />
+        <activity android:name=".PilihKursiActivity" />
+        <activity android:name=".IsiDataActivity" />
+        <activity android:name=".PembayaranActivity" />
+
+        <!-- Alur Cabang Jambu Dua -->
+        <activity android:name=".PilihTanggalActivity2" />
+        <activity android:name=".PilihKursiActivity2" />
+        <activity android:name=".IsiDataActivity2" />
+        <activity android:name=".PembayaranActivity2" />
+
     </application>
 
 </manifest>
