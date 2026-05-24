@@ -1,4 +1,4 @@
-package com.your.package.name
+package com.example.reservaseat
 
 import android.os.Bundle
 import android.view.View
